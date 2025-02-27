@@ -1,0 +1,11 @@
+【迁移数据文件】
+Step1. 在应用设置里找到数据目录，复制应用数据路径，关闭 CherryStudio，如C:\Users\xxx\AppData\Roaming\CherryStudio
+Step2. 将应用数据目录移动到你希望用于存放数据的目的路径，如 D:\AppData\CherryStudio
+Step3. 创建目录符号链接（创建符号链接需要管理员权限）或目录联接到新路径。
+Step4. 验证 C:\Users\xxx\AppData\Roaming\CherryStudio 正常链接到新路径，启动 CherryStudio。
+
+
+
+mklink /D "%APPDATA%\CherryStudio" "D:\A\OneDrive\APP\AI\CherryStudio\data"
+dir /AL "%APPDATA%\"
+rmdir "%APPDATA%\CherryStudio"
